@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fanta Home</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">
+            <a href="index.html">
+                <img src="fanta-logo.png" alt="Fanta Logo">
+            </a>
+        </div>
+        <div class="nav-links">
+            <a href="index.html" class="button">Home</a>
+            <a href="about.html" class="button">About Us</a>
+            <a href="contact.html" class="button">Contact</a>
+        </div>
+        <div class="social-icons">
+            <a href="https://www.instagram.com/fanta/" target="_blank">
+                <img src="instagram-icon.png" alt="Instagram">
+            </a>
+            <a href="https://www.facebook.com" target="_blank">
+                <img src="facebook-icon.png" alt="Facebook">
+            </a>
+            <a href="https://www.twitter.com" target="_blank">
+                <img src="twitter-icon.png" alt="Twitter">
+            </a>
+        </div>
+    </nav>
+
+    <!-- Video Background -->
+    <div id="home" class="video-background">
+        <video autoplay muted loop>
+            <source src="background-video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <!-- Slideshow Section (About Us) -->
+    <div id="about" class="content-container">
+        <h2>Explore Our Flavors</h2>
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+                <a href="fanta-orange.html">
+                    <img src="fanta-orange.jpg" alt="Fanta Orange" class="slide-img">
+                    <div class="text">Fanta Orange</div>
+                </a>
+            </div>
+            <div class="mySlides fade">
+                <a href="fanta-grape.html">
+                    <img src="fanta-grape.jpg" alt="Fanta Grape" class="slide-img">
+                    <div class="text">Fanta Grape</div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <div id="contact" class="contact-section">
+        <h2>Contact Us</h2>
+        <p>Have questions or feedback? We'd love to hear from you!</p>
+        <!-- Add your contact form or contact details here -->
+    </div>
+
+    <!-- JavaScript for Slideshow -->
+    <script>
+        let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            let slides = document.getElementsByClassName("mySlides");
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {
+                slideIndex = 1;
+            }
+            slides[slideIndex - 1].style.display = "block";
+            setTimeout(showSlides, 3000); // Change image every 3 seconds
+        }
+    </script>
+
+</body>
+</html>

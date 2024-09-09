@@ -1,0 +1,184 @@
+/* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+    font-family: Arial, sans-serif;
+    color: white;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 10px 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* Logo */
+.logo img {
+    height: 50px; /* Adjust size as needed */
+    width: auto;
+}
+
+/* Navbar links */
+.nav-links {
+    display: flex;
+    gap: 15px;
+}
+
+.nav-links .button {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    background-color: #FF6200; /* Changed to orange */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+    box-shadow: 0px 5px 0px transparent; /* No 3D effect initially */
+}
+
+.nav-links .button:hover {
+    background-color: #ff8c42; /* Lighter orange on hover */
+    transform: translateY(-5px);
+    box-shadow: 0px 10px 0px #c43b17;
+}
+
+.nav-links .button:active {
+    transform: translateY(3px);
+    box-shadow: 0px 2px 0px #c43b17;
+}
+
+/* Social Icons */
+.social-icons {
+    display: flex;
+    gap: 10px;
+}
+
+.social-icons img {
+    height: 30px; /* Adjust icon size as needed */
+    width: auto;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.social-icons img:hover {
+    opacity: 1;
+}
+
+/* Video background */
+.video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.video-background video {
+    min-height: 100%;
+    min-width: 100%;
+    object-fit: cover;
+    filter: brightness(0.7); /* Slightly darkened for better text contrast */
+}
+
+/* Content container */
+.content-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+    z-index: 2;
+    background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent background */
+    border-radius: 15px;
+    padding: 20px;
+}
+
+/* Slideshow container */
+.slideshow-container {
+    position: relative;
+    max-width: 80%;
+    margin: auto;
+    z-index: 1;
+}
+
+/* Slides */
+.mySlides {
+    display: none;
+}
+
+.fade {
+    animation: fade 1s ease-in-out;
+}
+
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+/* Image styles */
+.slide-img {
+    width: 100%;
+    max-height: 70vh;
+    object-fit: contain;
+    border-radius: 10px;
+    transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
+}
+
+.slide-img:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Text on image */
+.text {
+    color: #f2f2f2;
+    font-size: 2em;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 0 0 10px 10px;
+}
+
+/* H1 Styles */
+.content-container h1 {
+    font-size: 4.5em; /* Increase size for emphasis */
+    margin-bottom: 20px;
+    color: #FF6200; /* Bright orange for Fanta Orange */
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5); /* Add shadow to make it pop */
+}
+
+/* Paragraph styles */
+.content-container p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Navigation button container */
+.content-container nav {
+    display: flex;
+    gap: 10px;
+}

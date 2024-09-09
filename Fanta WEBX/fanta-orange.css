@@ -1,0 +1,244 @@
+/* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+    background: linear-gradient(135deg, #FF6200, #FF914D);
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 15px 20px;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+.navbar:hover {
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+/* Logo */
+.logo img {
+    height: 60px;
+    width: auto;
+    max-width: 100%;
+    transition: transform 0.3s ease;
+}
+
+.logo img:hover {
+    transform: rotate(360deg) scale(1.2); /* Fun rotation on hover */
+}
+
+/* Navbar links */
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links .button {
+    color: #fff;
+    text-decoration: none;
+    padding: 12px 25px;
+    border-radius: 50px;
+    background: linear-gradient(135deg, #FF6200, #FF914D);
+    transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 5px 15px rgba(255, 98, 0, 0.3);
+}
+
+.nav-links .button:hover {
+    background: linear-gradient(135deg, #FF914D, #FF6200);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(255, 98, 0, 0.5);
+}
+
+.nav-links .button:active {
+    transform: translateY(3px);
+    box-shadow: 0 3px 10px rgba(255, 98, 0, 0.4);
+}
+
+/* Social Icons */
+.social-icons {
+    display: flex;
+    gap: 10px;
+}
+
+.social-icons img {
+    height: 40px;
+    width: auto;
+    opacity: 0.7;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.social-icons img:hover {
+    opacity: 1;
+    transform: scale(1.2);
+}
+
+/* Video background */
+.video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.video-background video {
+    min-height: 100%;
+    min-width: 100%;
+    object-fit: cover;
+    filter: brightness(0.6);
+}
+
+/* Content container */
+.content-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(5px); /* Cool glassmorphism effect */
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+    animation: fadeIn 1.5s ease;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; transform: scale(0.8); }
+    100% { opacity: 1; transform: scale(1); }
+}
+
+/* Heading styles */
+.content-container h1 {
+    font-size: 5em;
+    color: #FF914D;
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+    animation: pulse 1s infinite alternate; /* Glowing effect */
+}
+
+@keyframes pulse {
+    0% { text-shadow: 0 0 10px rgba(0, 0, 0, 0.3); }
+    100% { text-shadow: 0 0 25px rgba(0, 0, 0, 0.8); }
+}
+
+/* Paragraph styles */
+.content-container p {
+    font-size: 1.5em;
+    line-height: 1.8;
+    color: #fff;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Button styles */
+.content-container .cta-button {
+    padding: 15px 30px;
+    font-size: 1.5em;
+    color: #fff;
+    background: #FF6200;
+    border: none;
+    border-radius: 40px;
+    transition: all 0.4s ease;
+    box-shadow: 0 8px 15px rgba(255, 98, 0, 0.5);
+    cursor: pointer;
+}
+
+.content-container .cta-button:hover {
+    background: #FF914D;
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(255, 98, 0, 0.8);
+}
+
+/* Additional styles for Fanta Orange emphasis */
+.fanta-glow {
+    color: #FF914D;
+    text-shadow: 0 0 20px #FF6200, 0 0 30px #FF914D, 0 0 40px #FF6200;
+    animation: glow 1.5s ease-in-out infinite;
+}
+
+@keyframes glow {
+    0% { text-shadow: 0 0 10px #FF6200; }
+    100% { text-shadow: 0 0 40px #FF914D; }
+}
+
+/* Slideshow Styles */
+.slideshow-container {
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+}
+
+.mySlides {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.slide-img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Text overlay for slideshow */
+.text {
+    color: #fff;
+    font-size: 2em;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 5px;
+}
+/* Slideshow container */
+.slideshow-container {
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+    overflow: hidden;
+}
+
+/* Slide images */
+.slide-img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Slide text */
+.text {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+    font-size: 1.5em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}

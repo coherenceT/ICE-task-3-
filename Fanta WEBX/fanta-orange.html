@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fanta Orange</title>
+    <link rel="stylesheet" href="fanta-orange.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">
+            <img src="fanta-logo.png" alt="Fanta Orange Logo">
+        </div>
+        <div class="nav-links">
+            <a href="index.html" class="button">Home</a>
+            <a href="fanta-orange.html" class="button">Flavors</a>
+            <a href="about.html" class="button">About Us</a>
+            <a href="contact.html" class="button">Contact</a>
+        </div>
+        <div class="social-icons">
+            <a href="#"><img src="facebook-icon.png" alt="Facebook"></a>
+            <a href="#"><img src="twitter-icon.png" alt="Twitter"></a>
+            <a href="#"><img src="instagram-icon.png" alt="Instagram"></a>
+        </div>
+    </nav>
+
+    <!-- Video background -->
+    <div class="video-background">
+        <video autoplay muted loop>
+            <source src="orange-video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <!-- Main content -->
+    <div class="content-container">
+        <h1 class="fanta-glow">Experience the Flavor Explosion!</h1>
+        <p>Fanta Orange brings you a burst of citrus excitement with every sip! Whether you’re chilling with friends or having a solo refreshment moment, Fanta's got the zing you need.</p>
+        <button class="cta-button">Find Fanta Near You</button>
+    </div>
+
+    <!-- Slideshow -->
+    <div class="slideshow-container">
+        <div class="mySlides fade">
+            <img src="fanta-orange1.jpg" class="slide-img" alt="Fanta Orange Bottle">
+            <div class="text">Fresh Fanta, Always!</div>
+        </div>
+        <div class="mySlides fade">
+            <img src="fanta-orange2.jpg" class="slide-img" alt="Fanta Fun">
+            <div class="text">Fun with Fanta!</div>
+        </div>
+        <div class="mySlides fade">
+            <img src="fanta-orange3.jpg" class="slide-img" alt="Fanta with Friends">
+            <div class="text">Fanta Party Time!</div>
+        </div>
+    </div>
+
+    <script>
+        let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            let slides = document.getElementsByClassName("mySlides");
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) { slideIndex = 1 }
+            slides[slideIndex - 1].style.display = "block";
+            setTimeout(showSlides, 3000); // Change image every 3 seconds
+        }
+    </script>
+</body>
+</html>

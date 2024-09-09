@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fanta Grape</title>
+    <link rel="stylesheet" href="fanta-grape.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">
+            <img src="fanta-grape-logo.png" alt="Fanta Grape Logo">
+        </div>
+        <div class="nav-links">
+            <a href="index.html" class="button">Home</a>
+            <a href="fanta-orange.html" class="button">Flavors</a>
+            <a href="about.html" class="button">About Us</a>
+            <a href="contact.html" class="button">Contact</a>
+        </div>
+        <div class="social-icons">
+            <a href="#"><img src="facebook-icon.png" alt="Facebook"></a>
+            <a href="#"><img src="twitter-icon.png" alt="Twitter"></a>
+            <a href="#"><img src="instagram-icon.png" alt="Instagram"></a>
+        </div>
+    </nav>
+
+    <!-- Video background -->
+    <div class="video-background">
+        <video autoplay muted loop>
+            <source src="grape-video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <!-- Main content -->
+    <div class="content-container">
+        <h1 class="fanta-glow">Bold Grape Flavor Explosion!</h1>
+        <p>Dive into the rich and bold flavor of Fanta Grape. This refreshing drink is perfect for grape lovers who want to savor every sip of this vibrant and exciting soda.</p>
+        <button class="cta-button grape">Find Fanta Grape Near You</button>
+    </div>
+
+    <!-- Slideshow -->
+    <div class="slideshow-container">
+        <div class="mySlides fade">
+            <img src="fanta-grape1.jpg" class="slide-img" alt="Fanta Grape Bottle">
+            <div class="text">Taste the Boldness!</div>
+        </div>
+        <div class="mySlides fade">
+            <img src="fanta-grape2.jpg" class="slide-img" alt="Grape Fun">
+            <div class="text">Feel the Grape Rush!</div>
+        </div>
+        <div class="mySlides fade">
+            <img src="fanta-grape3.jpg" class="slide-img" alt="Fanta with Grape">
+            <div class="text">Grape-tastic Fun!</div>
+        </div>
+    </div>
+
+    <script>
+        let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            let slides = document.getElementsByClassName("mySlides");
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) { slideIndex = 1 }
+            slides[slideIndex - 1].style.display = "block";
+            setTimeout(showSlides, 3000); // Change image every 3 seconds
+        }
+    </script>
+</body>
+</html>
